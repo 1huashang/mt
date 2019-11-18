@@ -8,7 +8,7 @@
   </el-container>
 </template>
 <script>
-  import MyHeader from '../components/public/header/index.vue'
+  import MyHeader from '../components/public/header/topbar.vue'
   export default{
       components:{
           MyHeader
