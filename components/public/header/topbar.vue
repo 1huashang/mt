@@ -15,7 +15,7 @@
 <script>
   import Geo from './geo.vue'
   import User from './user.vue'
-  import Navbar from './nav.vue'
+  import Navbar from './navbar.vue'
     export default {
         name: "topbar",
         components:{
