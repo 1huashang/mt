@@ -1,4 +1,17 @@
-const state = () => ({menu: [], hotPlace: []})
+const state = () => ({menu: [], hotPlace: [
+  {
+    name:'热门景点'
+  },
+  {
+    name:'热门景点'
+  },
+  {
+    name:'热门景点'
+  },
+  {
+    name:'热门景点'
+  }
+]})
 
 const mutations = {
   setMenu(state, val) {

@@ -16,6 +16,7 @@ import search from './interface/search'
 
 const app = new Koa()
 
+//cookies
 app.keys = ['mt','keyskeys']
 app.proxy = true
 app.use(session({
@@ -29,8 +30,10 @@ app.use(bodyParser({
 app.use(json())
 
 //连接数据库
+mongoose.set('useCreateIndex',true)
 mongoose.connect(dbConfig.dbs,{
-  useNewUrlParser:true
+  useNewUrlParser:true,
+  useUnifiedTopology: true
 })
 app.use(passport.initialize())
 app.use(passport.session())

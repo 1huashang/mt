@@ -19,7 +19,7 @@ import searchBar from './searchbar.vue'
 export default {
   components:{
     topBar,
-    searchBar
+    'search-bar':searchBar
   }
 }
 </script>

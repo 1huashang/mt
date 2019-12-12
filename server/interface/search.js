@@ -5,6 +5,8 @@ import Poi from '../dbs/models/poi'
 
 let router = new Router({prefix: '/search'})
 
+const sign = 'abcd';
+
 router.get('/top', async (ctx) => {
   // try {
   //   let top = await Poi.find({

@@ -18,13 +18,14 @@
             return {
                 user:''
             }
+        },
+        //异步操作 vue生命周期钩子函数   解构赋值
+        async mounted(){
+        const {status,data:{user}} = await this.$axios.get('/users/getUser')
+        if(status===200){
+        this.user=user
         }
-        // async mounted(){
-        // const {status,data:{user}} = await this.$axios.get('/users/getUser')
-        // if(status===200){
-        // this.user=user
-      //   }
-      // }
+      }
     }
 </script>
 
