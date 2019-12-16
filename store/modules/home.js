@@ -10,6 +10,15 @@ const state = () => ({menu: [], hotPlace: [
   },
   {
     name:'热门景点'
+  },
+  {
+    name:'热门景点'
+  },
+  {
+    name:'热门景点'
+  },
+  {
+    name:'热门景点'
   }
 ]})
 

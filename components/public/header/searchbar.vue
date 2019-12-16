@@ -80,6 +80,9 @@ export default {
       searchList:[]
     }
   },
+  // beforeMount(){
+  //   console.log(this.$store,'store')
+  // },
   computed:{
     isHotPlace:function(){
       return this.isFocus&&!this.search
