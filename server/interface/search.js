@@ -8,6 +8,7 @@ let router = new Router({prefix: '/search'})
 const sign = 'abcd';
 
 router.get('/top', async (ctx) => {
+  //mongose模型
   // try {
   //   let top = await Poi.find({
   //     'name': new RegExp(ctx.query.input),
@@ -45,6 +46,7 @@ router.get('/top', async (ctx) => {
   }
 })
 
+//景点   商丘没有
 router.get('/hotPlace', async (ctx) => {
   // let city = ctx.store ? ctx.store.geo.position.city : ctx.query.city
   // try {
@@ -86,6 +88,7 @@ router.get('/hotPlace', async (ctx) => {
   }
 })
 
+//商品详情
 router.get('/resultsByKeywords', async (ctx) => {
   const {city, keyword} = ctx.query;
   let {
@@ -109,6 +112,7 @@ router.get('/resultsByKeywords', async (ctx) => {
   }
 })
 
+//获取产品信息
 router.get('/products', async (ctx) => {
   let keyword = ctx.query.keyword || '旅游'
   let city = ctx.query.city || '北京'

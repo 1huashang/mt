@@ -11,12 +11,14 @@
         <div class="m-life-login">
           <h4><img src="//s0.meituan.net/bs/fe-web-meituan/e350c4a/img/avatar.jpg" alt=""></h4>
           <p class="m-life-login-name">Hi！你好</p>
-          <p><nuxt-link to="/register"><el-button
-            round
-            size="medium">注册</el-button></nuxt-link></p>
-          <p><nuxt-link to="/login"><el-button
-            round
-            size="medium">立即登录</el-button></nuxt-link></p>
+          <div class="m-btn">
+            <p><nuxt-link to="/register"><el-button
+              round
+              size="medium">注册</el-button></nuxt-link></p>
+            <p><nuxt-link to="/login"><el-button
+              round
+              size="medium">立即登录</el-button></nuxt-link></p>
+            </div>
         </div>
       </el-col>
     </el-row>

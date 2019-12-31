@@ -12,6 +12,9 @@ import passport from './interface/utils/passport.js'
 import users from './interface/users'
 import geo from './interface/geo'
 import search from './interface/search'
+import categroy from './interface/categroy'
+import cart from './interface/cart'
+import order from './interface/order'
 
 
 const app = new Koa()
@@ -32,8 +35,7 @@ app.use(json())
 //连接数据库
 mongoose.set('useCreateIndex',true)
 mongoose.connect(dbConfig.dbs,{
-  useNewUrlParser:true,
-  useUnifiedTopology: true
+  useNewUrlParser:true
 })
 app.use(passport.initialize())
 app.use(passport.session())
@@ -62,6 +64,9 @@ async function start () {
   app.use(users.routes()).use(users.allowedMethods())
   app.use(geo.routes()).use(geo.allowedMethods())
   app.use(search.routes()).use(search.allowedMethods())
+  app.use(categroy.routes()).use(categroy.allowedMethods())
+  app.use(cart.routes()).use(cart.allowedMethods())
+  app.use(order.routes()).use(order.allowedMethods())
 
   app.use(ctx => {
       ctx.status = 200 // koa defaults to 404 when it sees that status is unset

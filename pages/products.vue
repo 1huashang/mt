@@ -27,8 +27,8 @@ export default {
   components:{
     Crumbs,
     Categroy,
-    List
-    // Amap
+    List,
+    Amap
   },
   data(){
     return {
@@ -41,8 +41,8 @@ export default {
   },
   async asyncData(ctx){
     //获取异步数据
-    let keyword = ctx.query.keyword
-    let city = ctx.store.state.geo.position.city
+    let keyword = encodeURIComponent(ctx.query.keyword)
+    let city = encodeURIComponent(ctx.store.state.geo.position.city)
     let {status,data:{count,pois}} = await ctx.$axios.get('/search/resultsByKeywords',{
       params:{
         keyword,

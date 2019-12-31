@@ -6,6 +6,7 @@ let router = new Router({prefix: '/geo'})
 
 const sign = 'abcd';
 
+//获取当前地址接口
 router.get('/getPosition', async (ctx) => {
   let {
     status,

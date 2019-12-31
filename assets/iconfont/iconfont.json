@@ -1,0 +1,16 @@
+{
+  "id": "1587722",
+  "name": "mt",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "417587",
+      "name": "iconfont-unie64d",
+      "font_class": "iconfontunie64d",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    }
+  ]
+}

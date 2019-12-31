@@ -14,9 +14,9 @@
       class="m-categroy-section">
       <dt :id="'city-'+item.title">{{ item.title }}</dt>
       <dd>
-        <span
+        <nuxt-link to="/"><span
           v-for="c in item.city"
-          :key="c">{{ c }}</span>
+          :key="c">{{ c }}</span></nuxt-link>
       </dd>
     </dl>
   </div>
@@ -64,4 +64,7 @@ export default {
 
 <style lang="scss">
   @import "@/assets/css/changeCity/categroy.scss";
+  .m-categroy-section a :hover{
+    color: #000;
+  }
 </style>

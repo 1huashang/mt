@@ -88,6 +88,7 @@
       },200),
       handleSelect:function(item){
         //跳转语句
+        let self = this;
         console.log(item.value);
       }
     }

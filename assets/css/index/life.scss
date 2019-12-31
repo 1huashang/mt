@@ -8,6 +8,7 @@
     }
     .m-life-login{
         margin:10px 0 10px 0;
+        border:1px solid #e5e5e5;
         box-sizing:border-box;
         height:240px;
         background:#fff;
@@ -17,11 +18,22 @@
         padding:30px;
 
         .m-life-login-name {
-          margin-bottom: 10px;
+          margin:0 auto;
+          text-align: center;
+          font-size: 16px;
+          color:#222;
+          font-weight: 500;
+          white-space: nowrap;
+          width:6em;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .m-btn{
+          margin-top: -5px;
         }
         button{
           width: 118px;
-          margin: 5px;
+          margin-top: 15px;
         }
         h4 {
           img {
@@ -34,7 +46,8 @@
 
         p>button {
           width: 120px;
-          margin-bottom: 15px;
+          height: 50px;
+
         }
     }
     .m-life-hotel,
@@ -63,7 +76,7 @@
         background:#fff;
         height:165px;
         text-align:center;
-
+        border:1px solid #e5e5e5;
         img {
           width: 95px;
           height: 95px;
@@ -71,6 +84,7 @@
         }
 
         p {
+          margin-top:-3px;
           font-size: 16px;
           color: #222;
           font-weight: 500;
@@ -79,7 +93,7 @@
         h4 {
           font-size: 12px;
           font-weight: 500;
-          margin-top: 2px;
+          margin-top: -1px;
 
           span {
             color: #EC5330;

@@ -29,7 +29,20 @@ const store = () => new Vuex.Store({
           city:app.store.state.geo.position.city.replace('市','')
         }
       })
-      commit('home/setHotPlace',status3===200?result:[])
+      commit('home/setHotPlace',status3===200?result:[
+		  {
+			  name:'热门景点',
+			},
+			{
+			name:'热门景点',
+			},
+			{
+			name:'热门景点',
+			},
+			{
+			name:'热门景点',
+			}
+	  ])
     }
   }
 })

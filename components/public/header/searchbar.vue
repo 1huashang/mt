@@ -4,7 +4,7 @@
       <el-col
         :span="3"
         class="left">
-        <img src="//s0.meituan.net/bs/fe-web-meituan/fa5f0f0/img/logo.png" alt="美团">
+        <nuxt-link to="/"><img src="//s0.meituan.net/bs/fe-web-meituan/fa5f0f0/img/logo.png" alt="美团"></nuxt-link>
       </el-col>
       <el-col
         :span="15"
@@ -26,6 +26,11 @@
               :key="idx">
               <a :href="'/products?keyword='+encodeURIComponent(item.name)">{{ item.name }}</a>
             </dd>
+            <!-- <dd>火锅</dd>
+            <dd>火锅</dd>
+            <dd>火锅</dd>
+            <dd>火锅</dd>
+            <dd>火锅</dd> -->
           </dl>
           <dl
             v-if="isSearchList"
@@ -34,7 +39,7 @@
               v-for="(item,idx) in searchList"
               :key="idx">
               <a :href="'/products?keyword='+encodeURIComponent(item.name)">{{ item.name }}</a>
-            </dd>
+            </dd>            
           </dl>
         </div>
         <p class="suggest">
@@ -42,6 +47,12 @@
             v-for="(item,idx) in $store.state.home.hotPlace.slice(0,5)"
             :key="idx"
             :href="'/products?keyword='+encodeURIComponent(item.name)">{{ item.name }}</a>
+            
+             <!-- <a>故宫博物院</a>
+             <a>故宫博物院</a>
+             <a>故宫博物院</a>
+             <a>故宫博物院</a>
+             <a>故宫博物院</a> -->
         </p>
         <ul class="nav">
           <li><nuxt-link
@@ -93,25 +104,26 @@ export default {
   },
   methods:{
     focus:function(){
-      this.isFocus=true
+      this.isFocus=true;
     },
     blur:function(){
       let self=this;
       setTimeout(function(){
         self.isFocus=false
-      },200)
+      },200);
     },
     input:_.debounce(async function(){
       //延时函数
       let self=this;
-      let city=self.$store.state.geo.position.city.replace('市','')
-      self.searchList=[]
+      let city=self.$store.state.geo.position.city.replace('市','');
+      self.searchList=[];
       let {status,data:{top}}=await self.$axios.get('/search/top',{
         params:{
           input:self.search,
           city
         }
       })
+      //填充
       self.searchList=top.slice(0,10)
     },300)
   }
@@ -119,4 +131,7 @@ export default {
 </script>
 
 <style lang="css">
+.m-header-searchbar left a{
+  text-decoration: none;
+}
 </style>

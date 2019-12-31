@@ -27,6 +27,40 @@
       <li
         v-for="item in cur"
         :key="item.title">
+        <nuxt-link to="/detail"><el-card
+          :body-style="{ padding: '0px' }"
+          shadow="never">
+          <img
+            :src="item.img"
+            class="image">
+          <ul class="cbody">
+            <li class="title">{{ item.title }}</li>
+            <li class="pos"><span>{{ item.pos }}</span></li>
+            <li class="price">￥<em>{{ item.price }}</em><span>/起</span></li>
+          </ul>
+        </el-card></nuxt-link>
+      </li>
+    </ul>
+
+    <dl @mouseover="over">
+      <dt>狠优惠</dt>
+      <dd
+        :class="{active:kind==='all'}"
+        kind="all"
+        keyword="景点">全部</dd>
+      <dd
+        :class="{active:kind==='part'}"
+        kind="part"
+        keyword="食物">美食</dd>
+      <dd
+        :class="{active:kind==='leisure'}"
+        kind="leisure"
+        keyword="休闲">休闲</dd>
+    </dl>
+    <ul class="ibody ">
+      <li
+        v-for="item in cur"
+        :key="item.title">
         <el-card
           :body-style="{ padding: '0px' }"
           shadow="never">
@@ -41,7 +75,7 @@
         </el-card>
       </li>
     </ul>
-  </section>
+  </section>    
 </template>
 <script>
 export default {
@@ -53,7 +87,8 @@ export default {
         part: [],
         spa: [],
         movie: [],
-        travel: []
+        travel: [],
+        leisure:[]
       }
     }
   },
